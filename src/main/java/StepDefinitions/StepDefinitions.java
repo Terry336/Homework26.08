@@ -60,7 +60,7 @@ public class StepDefinitions {
 
     @Then("user goes to the cart and verifies that the item is added")
     public void user_goes_to_the_cart_and_verifies_that_the_item_is_added() {
-        driver.findElement(By.id("shopping_cart_link")).click();
+        driver.findElement(By.className("shopping_cart_link")).click();
         WebElement itemAdded= driver.findElement(By.xpath("//div[@class='inventory_item_name']"));
         Assert.assertEquals("Sauce Labs Bolt T-Shirt", itemAdded.getText());
     }
